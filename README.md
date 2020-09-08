@@ -1,4 +1,7 @@
-# shopify
+# Winter 2021 Data Science Intern Challenge #
+
+Please complete the following questions, and provide your thought process/work. You can attach your work in a text file, link, etc. on the application page. Please ensure answers are easily visible for reviewers!
+
 ## Question 1: ##
 Given some sample data, write a program to answer the following: [click here to access the required data set](https://docs.google.com/spreadsheets/d/16i38oonuX1y1g7C_UAmiK9GkY7cS-64DfiDMNiR41LM/edit#gid=0)
 
@@ -29,6 +32,8 @@ Please see the [Jupyter Notebook](shopify_q1.ipynb) for the analysis accompanyin
 
 ## Question 2: ##
 For this question you’ll need to use SQL. [Follow this link](https://www.w3schools.com/SQL/TRYSQL.ASP?FILENAME=TRYSQL_SELECT_ALL) to access the data set required for the challenge. Please use queries to answer the following questions. Paste your queries along with your final numerical answers below.
+
+The indentions for SQL queries are not maintained in this markdown document. Please see the [shopify_q2.txt](shopify_q2.txt) file for queries that are easier to read.
 
 ### A. ###
 How many orders were shipped by Speedy Express in total?  
