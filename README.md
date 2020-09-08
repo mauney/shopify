@@ -28,7 +28,7 @@ The average, or mean, order value is not a good representation of a typical orde
 
 Medians are not influenced by a few extreme values, and in this case it is a good choice to represent a typical, or central, value.
 
-Please see the [Jupyter Notebook](shopify_q1.ipynb) for the analysis accompanying this question
+Please see the [shopify_q1.ipynb](shopify_q1.ipynb) Jupyter Notebook for the analysis accompanying this question
 
 ## Question 2: ##
 For this question you’ll need to use SQL. [Follow this link](https://www.w3schools.com/SQL/TRYSQL.ASP?FILENAME=TRYSQL_SELECT_ALL) to access the data set required for the challenge. Please use queries to answer the following questions. Paste your queries along with your final numerical answers below.
