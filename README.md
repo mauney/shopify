@@ -15,11 +15,11 @@ c. What is its value?
 ### Average Order Value Higher Than Expected ###
 Orders for March, 2017
 
-A reasonable replacement metric for the average order value is the median order value.
-Median Order Value: $284
+A reasonable replacement metric for the average order value is the median order value.  
+Median Order Value: $284  
 
-Alternatively, an AOV calculated after removing outliers in item price or order quantity could be used.
-Modified AOV: $300
+Alternatively, an AOV calculated after removing outliers in item price or order quantity could be used.  
+Modified AOV: $300  
 
 The average, or mean, order value is not a good representation of a typical order for the 100 shops. The higher than expected average is influenced by a few factors:
  - Shop 78 has shoes priced at $25,725. This is probably incorrect. The high value is pulling up the value of the average order from other shops.
