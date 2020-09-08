@@ -22,9 +22,9 @@ Peacock
 SELECT LastName AS Employee_most_orders_lastname  
 FROM Employees  
 WHERE EmployeeID = (SELECT TOP 1 EmployeeID  
-					FROM Orders  
-					GROUP BY EmployeeID  
-					ORDER BY COUNT(*) DESC);  
+                    FROM Orders  
+                    GROUP BY EmployeeID  
+                    ORDER BY COUNT(*) DESC);  
 
 Result:  
 Employee_most_orders_lastname  
@@ -48,7 +48,7 @@ FROM Products
 INNER JOIN OrderDetails  
 ON Products.ProductID = OrderDetails.ProductID  
 WHERE OrderID IN (SELECT OrderID  
-				  FROM Orders  
+                  FROM Orders  
                   WHERE CustomerID IN (SELECT CustomerID  
                                        FROM Customers  
                                        WHERE Country = "Germany"))  
@@ -56,9 +56,11 @@ GROUP BY ProductName
 ORDER BY SUM(Quantity) DESC;  
 
 Result:  
-Most_ordered_product_by_quantity_from_Germany  
+
+Most_ordered_product_by_quantity_from_Germany:  
 Boston Crab Meat  
-total_units  
+
+total_units:  
 160  
 
 *Query Two*  
@@ -68,7 +70,7 @@ FROM Products
 INNER JOIN OrderDetails  
 ON Products.ProductID = OrderDetails.ProductID  
 WHERE OrderID IN (SELECT OrderID  
-				  FROM Orders  
+                  FROM Orders  
                   WHERE CustomerID IN (SELECT CustomerID  
                                        FROM Customers  
                                        WHERE Country = "Germany"))  
@@ -76,7 +78,9 @@ GROUP BY ProductName
 ORDER BY COUNT(*) DESC;  
 
 Result:  
+
 Most_ordered_product_by_order_from_Germany  
 Gorgonzola Telino  
+
 number_of_orders  
-5  
+5   
