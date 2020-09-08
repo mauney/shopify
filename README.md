@@ -33,12 +33,11 @@ Please see the [shopify_q1.ipynb](shopify_q1.ipynb) Jupyter Notebook for the ana
 ## Question 2: ##
 For this question you’ll need to use SQL. [Follow this link](https://www.w3schools.com/SQL/TRYSQL.ASP?FILENAME=TRYSQL_SELECT_ALL) to access the data set required for the challenge. Please use queries to answer the following questions. Paste your queries along with your final numerical answers below.
 
-The indentions for SQL queries are not maintained in this markdown document. Please see the [shopify_q2.txt](shopify_q2.txt) file for queries that are easier to read.
-
 ### A. ###
 How many orders were shipped by Speedy Express in total?  
 54
 
+```
 SELECT COUNT(*) AS num_orders_shipped_Speedy_Express  
 FROM Orders  
 WHERE ShipperID = (SELECT DISTINCT ShipperID  
@@ -46,13 +45,15 @@ WHERE ShipperID = (SELECT DISTINCT ShipperID
                    WHERE ShipperName = "Speedy Express");  
 
 Result:  
-num_orders_shipped_Speedy_Express  
-54
+num_orders_shipped_Speedy_Express
+54 
+```
 
 ### B. ###
 What is the last name of the employee with the most orders?  
 Peacock  
 
+```
 SELECT LastName AS Employee_most_orders_lastname  
 FROM Employees  
 WHERE EmployeeID = (SELECT TOP 1 EmployeeID  
@@ -61,8 +62,9 @@ WHERE EmployeeID = (SELECT TOP 1 EmployeeID
 					ORDER BY COUNT(*) DESC);  
 
 Result:  
-Employee_most_orders_lastname  
+Employee_most_orders_lastname
 Peacock  
+```
 
 ### C. ###
 What product was ordered the most by customers in Germany?  
@@ -75,7 +77,8 @@ Boston Crab Meat, with 160 units ordered in total from Germany
 *Answer Two*  
 Gorgonzola Telino, appearing in five orders from Germany 
 
-*Query One*  
+*Query One* 
+``` 
 SELECT TOP 1 ProductName AS Most_ordered_product_by_quantity_from_Germany,  
        SUM(Quantity) AS total_units  
 FROM Products  
@@ -90,12 +93,12 @@ GROUP BY ProductName
 ORDER BY SUM(Quantity) DESC;  
 
 Result:  
-Most_ordered_product_by_quantity_from_Germany  
-Boston Crab Meat  
-total_units  
-160  
+Most_ordered_product_by_quantity_from_Germany	total_units
+Boston Crab Meat  	                            160  
+```
 
 *Query Two*  
+```
 SELECT TOP 1 ProductName AS Most_ordered_product_by_order_from_Germany,  
        COUNT(*) AS number_of_orders  
 FROM Products  
@@ -110,7 +113,6 @@ GROUP BY ProductName
 ORDER BY COUNT(*) DESC;  
 
 Result:  
-Most_ordered_product_by_order_from_Germany  
-Gorgonzola Telino  
-number_of_orders  
-5  
+Most_ordered_product_by_order_from_Germany	number_of_orders
+Gorgonzola Telino  	                            5 
+```
