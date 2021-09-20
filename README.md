@@ -48,6 +48,18 @@ Result:
 num_orders_shipped_Speedy_Express
 54 
 ```
+Alternative:
+```
+SELECT p.ProductName, t.Total FROM Products AS p
+INNER JOIN (
+	SELECT od.ProductID, SUM(od.Quantity) AS Total FROM OrderDetails AS od
+	INNER JOIN Orders AS o on od.OrderID = o.OrderID
+	INNER JOIN Customers AS c ON o.CustomerID = c.CustomerID
+	WHERE c.Country='Germany'
+	GROUP BY od.ProductID
+	ORDER BY Total DESC) AS t ON p.ProductID = t.ProductID
+LIMIT 1;
+```
 
 ### B. ###
 What is the last name of the employee with the most orders?  
